@@ -16,7 +16,7 @@ def checkMovement(sensor, led):
         try:
             movement = digitalRead(sensor)
 
-            print("how'd he get in, intruder window?", flashThread.is_alive())
+            print("how'd he get in, intruder window?")
             if movement > 0 and flashThread.is_alive() == False:
 
                 flashThread.start()
