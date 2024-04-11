@@ -18,9 +18,10 @@ def checkMovement(sensor, led):
 
             if movement > 0 and flashThread.is_alive() == False:
 
-                print("how'd he get in, intruder window?")
+                print("intruder detected")
 
                 flashThread.start()
+                flashThread.join()
 
             time.sleep(0.4)
 
